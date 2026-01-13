@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language UpSet Chart</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    #upset {
+      /* border: 1px solid #ccc; */
+    }
+    h1 {
+      font-size: 18pt;
+      margin: 0;
+    }
+    /* some manual style hacking for the plot */
+    [class^=cBarTextStyle] {
+      display: none
+    }
+    svg {
+      transform: translate(-20px, -20px)
+    }
+  </style>
+</head>
+<body>
+  <fieldset>
+    <legend><h1>Languages Spoken in the EU</h1></legend>
+    Below is known as an <a href="https://en.wikipedia.org/wiki/UpSet_plot#cite_note-upset_infovis_2014-1">UpSet plot</a>, a generalization of a Venn diagram for large numbers of sets proposed by researchers at Harvard <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/">in 2014</a>.
+
+    In these plots, you can make comparisons on the sizes of various sets within a group.  For example, there are more speakers of English+German in the EU than speakers who solely speak English.
+
+    <br> <br>
+    <span>
+    <a href="https://search.gesis.org/research_data/ZA8778">Data</a>
+    </span>
+    <span>
+    <a href="https://github.com/evidlo/language_upset">Source Code</a>
+    </span>
+    Built with <a href="https://upset.js.org/">UpSet.js</a>.
+  </fieldset>
+  <div id="upset"></div>
+  <script type="module" src="./bundle.js"></script>
+
+</body>
+</html>
